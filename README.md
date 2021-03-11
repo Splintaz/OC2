@@ -1,20 +1,18 @@
 
-![wordpac](images/wordpac.png)
 # WordPac
 WordPac (Word Program and Control) allows you to send commands and receive data with a Word Macro. 
 
-                     ▄▄▌ ▐ ▄▌      ▄▄▄  ·▄▄▄▄   ▄▄▄· ▄▄▄·  ▄▄· 
-                     ██· █▌▐█▪     ▀▄ █·██▪ ██ ▐█ ▄█▐█ ▀█ ▐█ ▌▪
-                     ██▪▐█▐▐▌ ▄█▀▄ ▐▀▀▄ ▐█· ▐█▌ ██▀·▄█▀▀█ ██ ▄▄
-                     ▐█▌██▐█▌▐█▌.▐▌▐█•█▌██. ██ ▐█▪·•▐█ ▪▐▌▐███▌
-                     ▀▀▀▀ ▀▪ ▀█▄▀▪.▀  ▀▀▀▀▀▀• .▀    ▀  ▀ ·▀▀▀
+![wordpac](images/wordpac.png)
+
 # How does it work?
 
 It uses Flask as the web framework to host your website, and when the victim runs the document, it will allow you to execute remote commands so that you recieve the data.
 
-The data can be seen with Wireshark, but I didn't bother to actually encrypt the data. There is some Base64 encryption code inside c2.txt that you should be able to maneuver if you're tech savvy.
+You will be able to recieve encrypted data, and then decode it with Word. It's a simple encoded message, however most organizations look for Base64 encoding when monitoring traffic so this is simple, but effective. It can be seen with Wireshark, but to the normal person it's just gibberish.
 
-![data](images/data.png)
+To decrypt it, paste the decrypt.txt inside a new Word macro, put your encrypted text inside STRING and run it.
+
+![encrypted](images/encryption.png)
 
 # Instructions
 
@@ -26,13 +24,12 @@ The data can be seen with Wireshark, but I didn't bother to actually encrypt the
 5. You should now be able to execute remote commands on the victim
 
 # Extra 
+You can also use Python instead of Word. 
 
-1. Open WordPac/extra/extra.txt
-2. Paste the views.route inside WordPac/post/views.py
-3. Create a new file for the request
-4. Run the main.py file to host your webserver
-5. Execute the request script
+1. Open WordPac/extra/requests.py
+2. Run the main.py file to host your webserver
+3. Execute the request script
 
 ![request](images/request.png)
 
-6. You should now recieve a "Hello" string from the victim, and the victim will recieve a "Alive" string
+4. You should now recieve a "Hello" string from the victim, and the victim will recieve a "Alive" string
