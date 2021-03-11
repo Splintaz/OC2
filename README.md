@@ -30,6 +30,6 @@ You can also use Python instead of Word.
 2. Run the main.py file to host your webserver
 3. Execute the request script
 
-![request](images/request.png)
+![alive](images/alive.png)
 
 4. You should now recieve a "Hello" string from the victim, and the victim will recieve a "Alive" string
