@@ -1,6 +1,6 @@
 
 # WordPac
-WordPac (Word Program and Control) allows you to send commands and receive data with a Word Macro. 
+WordPac (Word Program and Control) allows you to send remote commands and receive encrypted data with a Word Macro. 
 
 ![wordpac](images/wordpac.png)
 
