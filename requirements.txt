@@ -2,4 +2,5 @@ flask
 flask-login
 flask-sqlalchemy
 request
+requests
 colorama
