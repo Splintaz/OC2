@@ -26,10 +26,9 @@ To decrypt it, paste the decrypt.txt inside a new Word macro, put your encrypted
 # Extra 
 You can also use Python instead of Word. 
 
-1. Open WordPac/extra/requests.py
-2. Run the main.py file to host your webserver
-3. Execute the request script
+1. Run the main.py file to host your webserver
+2. Execute the request script inside WordPac/extra/requests.py
 
 ![alive](images/alive.png)
 
-4. You should now recieve a "Hello" string from the victim, and the victim will recieve a "Alive" string
+3. You should now recieve a "Hello" string from the victim, and the victim will recieve a "Alive" string
