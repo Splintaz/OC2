@@ -1,0 +1,16 @@
+Public Function decrypt(s As String, v As Long) As String
+Dim total As String
+Dim tmp As String
+For i = 1 To Len(s)
+tmp = Mid(s, i, 1)
+tmp = Asc(tmp) - v
+tmp = Chr(tmp)
+total = total & tmp
+Next i
+decrypt = total
+End Function
+
+Sub Auto_Open()
+    data = decrypt("STRING", 3)
+    MsgBox data
+End Sub
