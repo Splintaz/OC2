@@ -10,9 +10,13 @@ It uses Flask as the web framework to host your website, and when the victim run
 
 You will be able to recieve encrypted data, and then decode it with Word. It's a simple encoded message, however most organizations look for Base64 encoding when monitoring traffic so this is simple, but effective. It can be seen with Wireshark, but to the normal person it's just gibberish.
 
-To decrypt it, paste the decrypt.txt inside a new Word macro, put your encrypted text inside STRING and run it.
+To decrypt it, paste the decrypt.txt inside a new Word macro, put your encrypted text inside STRING and run it. The C2 will not have any encrypted data, and hopefully I'll come around to implement it. But for now, if you wish to use encrypted data just use the ENC.
 
 ![encrypted](images/encryption.png)
+
+* C2 = Command and Control
+* ENC = Encrypt
+* DEC = Decrypt
 
 # Instructions
 
