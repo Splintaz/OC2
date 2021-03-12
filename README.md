@@ -10,7 +10,7 @@ It uses Flask as the web framework to host your website, and when the victim run
 
 This macro also has a way of bypassing Windows Defender by creating a child process of Outlook, which is the only Office application which does not freak out. Even if Microsoft fixed it, it would probably break Outlook (at least I'm told so). However, many big companies do implement a way to block all Office applications from creating child processes. Beware: https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction
 
-You will be able to recieve encrypted data, and then decode it with Word. It's a simple encoded message, however most organizations look for Base64 encoding when monitoring traffic so this is simple, but effective. It can be seen with Wireshark, but to the normal person it's just gibberish.
+You will be able to recieve encrypted data, and then decode it by putting dec.txt inside another macro. It's a simple encoded message, however most organizations look for Base64 encoding when monitoring traffic so this is simple, but effective. It can be seen with Wireshark, but to the normal person it's just gibberish.
 
 To decrypt it, paste the decrypt.txt inside a new Word macro, put your encrypted text inside STRING and run it. The C2 will not have any encrypted data, so if you wish to use encrypted data just use the ENC. 
 
