@@ -1,5 +1,5 @@
-# OfficePac
-# Created by https://github.com/Splintaz
+# O-Pac (Office Program and Control) allows you to send remote commands and receive encrypted data with a Word/Excel/PowerPoint Macro.
+# Created by https://github.com/Splintaz/
 import colorama
 import json
 from flask import Blueprint, request, Response
