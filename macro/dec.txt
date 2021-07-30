@@ -11,6 +11,6 @@ decrypt = total
 End Function
 
 Sub Auto_Open()
-    data = decrypt("STRING", 3)
+    data = decrypt("STRING", 1)
     MsgBox data
 End Sub
