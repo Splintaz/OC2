@@ -31,7 +31,7 @@ Function SendToServerEnc(data As String)
     
     On Error GoTo error
     
-    data = encrypt(data, 3)
+    data = encrypt(data, 1)
     
     Set objHTTP = CreateObject("MSXML2.ServerXMLHTTP")
     
