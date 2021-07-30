@@ -12,7 +12,7 @@ This macro also has a way of bypassing Windows Defender by creating a child proc
 
 You will be able to recieve encrypted data. It's a custom encoded message, most organizations look for Base64 encoding when monitoring traffic so this is simple, but effective. It can be seen with Wireshark, but to the normal person it's just gibberish.
 
-To decrypt it, paste the decrypt.txt inside a new macro, put your encrypted text inside STRING and run it. The C2 can handle multiple commands but has no encryption, while the ENC can handle a single encrypted message.
+To decrypt it, paste the dec.txt inside a new macro, put your encrypted text inside STRING and run it. The C2 can handle multiple commands but has no encryption, while the ENC can handle a single encrypted message. (I tried to encrypt the C2 but it breaks every single time)
 
 ![encrypted](images/encryption.png)
 
