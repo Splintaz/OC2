@@ -12,4 +12,4 @@ def opac():
     print(Style.RESET_ALL)
 if __name__ == "__main__":
     opac()
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port="4444")
