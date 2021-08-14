@@ -2,7 +2,7 @@
 # O-PaC
 O-PaC (Office Program and Control) allows you to send remote commands and receive encrypted data with a Word/Excel/PowerPoint Macro. 
 
-![wordpac](images/o-pac.png)
+![opac](images/o-pac.png)
 
 # What is O-PaC?
 
