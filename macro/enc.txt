@@ -35,7 +35,7 @@ Function SendToServerEnc(data As String)
     
     Set objHTTP = CreateObject("MSXML2.ServerXMLHTTP")
     
-    URL = "http://127.0.0.1:5000/enc"
+    URL = "http://127.0.0.1:4444/enc"
     
     objHTTP.Open "POST", URL, False
     
