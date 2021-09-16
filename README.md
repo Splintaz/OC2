@@ -12,7 +12,7 @@ This macro also has a way of bypassing Windows Defender by creating a child proc
 
 You will be able to recieve encrypted data. It's a custom encoded message, most organizations look for Base64 encoding when monitoring traffic so this is simple, but effective. It can be seen with Wireshark, but to the normal person it's just gibberish.
 
-To decrypt it, paste the dec.txt inside a new macro, put your encrypted text inside STRING and run it. The C2 can handle multiple commands but has no encryption, while the ENC can handle a single encrypted message. (I tried to encrypt the C2 but it breaks every single time)
+To decrypt it, paste the dec.txt inside a new macro, put your encrypted text inside STRING and run it. The C2 can handle multiple commands but has no encryption, while the ENC can handle a single encrypted message. 
 
 ![encrypted](images/encryption.png)
 
@@ -27,7 +27,7 @@ To decrypt it, paste the dec.txt inside a new macro, put your encrypted text ins
 2. Edit main.py to match your public IP address and port forward your private IP address. Don't know how to? 
 - https://www.howtogeek.com/66214/how-to-forward-ports-on-your-router/
 4. Run the main.py file to host your webserver
-5. Edit the macro to replace it with your URL instead, then copy the macro to your Excel document and save it as a .xlsm
+5. Edit the macro to replace it with your URL instead, then copy the macro to your Excel document and save it as a .xls file.
 6. Enable editing, and then re-run it. It should automatically run the macro.
 7. You should now be able to execute remote commands on the victim
 
