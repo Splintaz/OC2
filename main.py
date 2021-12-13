@@ -6,7 +6,7 @@ from post import create_app
 app = create_app()
 def opac():
     print(Fore.GREEN + """
-Office Program and Control
+    Office Command and Control
 Created by https://github.com/Splintaz
 """)
     print(Style.RESET_ALL)
