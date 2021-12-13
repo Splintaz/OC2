@@ -1,5 +1,4 @@
- 
-# O-Pac (Office Program and Control) allows you to send remote commands and receive encrypted data with a Word/Excel/PowerPoint Macro.
+# OC2 (Office Command and Control) allows you to send remote commands and receive encrypted data with a Word/Excel/PowerPoint Macro.
 # Created by https://github.com/Splintaz/
 from flask import Flask
 def create_app():
