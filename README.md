@@ -2,7 +2,7 @@
 # OC2
 OC2 (Office Command and Control) allows you to send remote commands and receive encrypted data with a Word/Excel/PowerPoint Macro. 
 
-temp
+<img src="https://raw.githubusercontent.com/Splintaz/OC2/main/images/oc2.png" width="752" height="500">
 
 # What is OC2?
 
