@@ -12,4 +12,4 @@ Created by https://github.com/Splintaz
     print(Style.RESET_ALL)
 if __name__ == "__main__":
     opac()
-    app.run(host="0.0.0.0", port="4444")
+    app.run(host="0.0.0.0", port="1234")
