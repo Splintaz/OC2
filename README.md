@@ -40,6 +40,6 @@ You can also use Python instead of Word.
 1. Run the main.py file to host your webserver
 2. Execute the request script inside OfficePac/extra/requests.py
 
-![alive](images/response.png)
+![request](images/request.png)
 
 3. You should now recieve a "Hello" string from the victim, and the victim will recieve a "Alive" string
