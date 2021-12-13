@@ -1,10 +1,10 @@
 
-# O-PaC
-O-PaC (Office Program and Control) allows you to send remote commands and receive encrypted data with a Word/Excel/PowerPoint Macro. 
+# OC2
+OC2 (Office Command and Control) allows you to send remote commands and receive encrypted data with a Word/Excel/PowerPoint Macro. 
 
 ![opac](images/o-pac.png)
 
-# What is O-PaC?
+# What is OC2?
 
 It uses Flask as the web framework to host your website, and when the victim runs the document, it will allow you to execute remote commands so that you recieve the data. The macro uses Auto_Open() for Excel and AutoOpen() for Word.
 
